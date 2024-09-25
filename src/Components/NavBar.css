@@ -1,0 +1,122 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+}
+.logo_name{
+  color: yellow;
+}
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  /* opacity: 0.5; */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+/* .navbar:hover {
+  background-color: #444;
+} */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  /* background-color: white; */
+}
+
+.logo-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  transition: transform 0.3s ease;
+  /* mix-blend-mode: color; */
+ 
+}
+
+.logo-image:hover {
+  transform: scale(1.2);
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  
+}
+
+.navbar-links li {
+  margin: 0 15px;
+  position: relative;
+  
+}
+
+.nav-link {
+  color: yellow;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 5px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #ffff007e; /* Tomato color */
+  transform: scale(1.2);
+  text-decoration: none;
+}
+
+/* Underline hover animation */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  background: #ff6347;
+  transition: width 0.3s;
+  bottom: -5px;
+  left: 0;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Smooth scrolling when hovering on navbar */
+.navbar-links li:hover {
+  transition: transform 0.3s ease;
+  transform: translateY(-5px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    margin-top: 15px;
+  }
+
+  .navbar-links li {
+    margin: 10px 0;
+  }
+}

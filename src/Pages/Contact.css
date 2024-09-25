@@ -1,0 +1,45 @@
+.contact-container {
+    width: 100%; /* Full width */
+    padding: 20px; /* Adjust padding if needed */
+    margin-top: -250px; /* Move it up slightly */
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+  }
+  
+  .animated-text {
+    font-size: 2rem;
+    color: black;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .contact-info {
+    margin-top: 0; /* No margin */
+    /* text-align: center;  */
+  
+  }
+  
+  strong {
+    color: #050101;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

@@ -1,0 +1,116 @@
+/* General layout for home container */
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.left-section {
+  width: 50%;
+}
+
+.right-section {
+  width: 40%;
+}
+
+.profile-image {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.project-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: -50px;
+  opacity: 0;
+  transform: translateY(20px); /* Reduced the initial offset for animation */
+  animation: fadeInUp 1.5s ease-out forwards; /* Shortened duration and gentler easing */
+}
+
+/* Projects section layout */
+.projects-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 40px 20px;
+  margin-top: -250px;
+  opacity: 0;
+  transform: translateY(20px); /* Smaller movement for a smoother look */
+  animation: fadeInUp 1s ease-out forwards; /* Shortened animation duration */
+}
+
+/* Project Card Styling */
+.project-card {
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  backdrop-filter: blur(8px); /* Slightly reduce the blur for better performance */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out; /* Reduced hover transition time */
+  opacity: 0;
+  transform: translateY(20px); /* Reduced offset for a quicker load */
+}
+
+/* Hover effect on project card */
+.project-card:hover {
+  transform: translateY(-5px) scale(1.03); /* Less dramatic hover effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Subtle hover shadow */
+}
+
+/* Text and button styling inside project card */
+.project-card h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.read-more-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-out; /* Faster button transition */
+}
+
+.read-more-button:hover {
+  background-color: #0056b3; /* Subtle hover effect */
+}
+
+/* Banner for each project */
+.project-banner {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Less dramatic movement */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to project cards individually */
+.project-card.animated-card {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInUp 0.8s ease-out forwards; /* Faster and smoother fade-in */
+}

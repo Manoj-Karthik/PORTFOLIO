@@ -1,0 +1,192 @@
+  /* Container styling */
+  .home-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 20px;
+      /* background-color: #f4f4f4; */
+      height: 100vh;
+      font-weight: bold;
+      
+    }
+    
+   /* Left Section */
+  .left-section {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+    padding: 20px;
+    margin-top: 150px;
+    margin-left: 50px;
+    opacity: 0;
+    animation: fadeInUp 2s forwards; /* Added text animation */
+    font-size: 20px;
+  }
+  
+  /* Text Animation */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Additional animation for subheading */
+  .left-section h1 {
+    animation: textPop 3s ease-in-out forwards; /* Add to the heading */
+    color: rgb(248, 98, 29,0.9);
+  }
+  
+  /* Custom Pop Animation for Heading */
+  @keyframes textPop {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+    
+    .links-section {
+      margin-top: 20px;
+    }
+    
+    .resume-link, .skills-link {
+      padding: 10px 20px;
+      margin-right: 10px;
+      background-color: #ff6347;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .resume-link:hover, .skills-link:hover {
+      background-color: #ff4500;
+    }
+    
+    /* Right Section */
+    .right-section {
+      flex: 1;
+      max-width: 40%;
+      display: flex;
+      justify-content: flex-end;
+      padding: 20px;
+      margin-right: 100px;
+      margin-top: 50px;
+    }
+    
+    .profile-image {
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      border: 4px solid #ff6347;
+      /* animation: rotate-border 5s infinite linear; */
+      object-fit: cover;
+      
+    }
+    .skills-section {
+        width: 100%;
+        padding: 20px;
+        background-color: #f4f4f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      
+      .skills-section h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        position: relative;
+        opacity: 0;
+        animation: fadeIn 1s ease-in forwards;
+      }
+      
+      .skill {
+        margin-bottom: 20px;
+        opacity: 0;
+        transform: translateX(100%);
+        animation: slideInFromRight 1s ease-out forwards;
+      }
+      
+      .skill:nth-child(2) {
+        animation-delay: 0.3s;
+      }
+      
+      .skill:nth-child(3) {
+        animation-delay: 0.6s;
+      }
+      
+      .skill:nth-child(4) {
+        animation-delay: 0.9s;
+      }
+      
+      .stars {
+        font-size: 1.5rem;
+        color: gold;
+        margin-top: 5px;
+      }
+      
+      .read-more-btn {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: slideUp 1s ease-out forwards;
+        animation-delay: 1.2s;
+      }
+      
+      .read-more-btn:hover {
+        background-color: #0056b3;
+      }
+      
+      /* Animations */
+      @keyframes slideInFromRight {
+        0% {
+          opacity: 0;
+          transform: translateX(100%);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      
+      @keyframes slideUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      

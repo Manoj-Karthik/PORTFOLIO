@@ -1,0 +1,110 @@
+.education-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .education-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+    opacity: 0;
+    animation: fadeInDown 1s forwards; /* Heading animation */
+  }
+  
+  .education-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-in-out forwards; /* Section animation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .education-section:nth-child(2) {
+    animation-delay: 0.2s; /* Staggered delay for sections */
+  }
+  .education-section:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  .education-section:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+  
+  .education-section:hover {
+    transform: translateY(-10px); /* Hover lift effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+  }
+  
+  .education-section h2 {
+    font-size: 1.8rem;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .education-section p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Certificates section hover effect */
+  .certificates-section .certificate {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-in-out forwards;
+  }
+  
+  .certificates-section .certificate:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  .certificates-section .certificate:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  
+  /* .certificates-section .certificate:hover {
+    background-color: #e6f7ff; 
+    transform: translateY(-10px); 
+  } */
+  
+  .certificate h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .certificate p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Keyframe animations */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
